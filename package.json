@@ -1,0 +1,11 @@
+{
+  "name": "lasertag_landing",
+  "version": "1.0.0",
+  "description": "Lasertag Landing",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aliaksandr Andrasiuk",
+  "license": "MIT"
+}
