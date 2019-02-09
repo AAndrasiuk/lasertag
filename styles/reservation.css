@@ -1,0 +1,460 @@
+.reservation{
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	z-index: 999;
+	
+} 
+
+.reservationContainer{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	background-image: url(../img/31322_2_reversed.jpg);
+	background-size: cover;
+	margin: 150px 0;
+	padding: 60px 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 650px;
+	position: relative;
+}
+
+@keyframes rotate360{
+	0%{ transform: rotateZ(0deg);}
+	25%{ transform: rotateZ(90deg);}
+	50%{ transform: rotateZ(180deg);}
+	75%{ transform: rotateZ(270deg);}
+	100%{ transform: rotateZ(360deg);}
+ }
+
+.awaiter{
+	width: 67px;
+	height: 67px;
+	background-image: url(../img/awaiter.png);
+	background-repeat: no-repeat;
+	display: none;
+	z-index: 9999;
+	position: fixed;
+	top:45%;
+	left:48%;
+	transform: translate(-50%, -50%);
+	animation: rotate360 2s infinite running;
+}
+
+
+.calendar, .date-container{
+	
+	flex:1;
+	min-height:150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.calendar{
+	min-height: 100px;
+}
+
+.date__session, .date__hour{
+	padding: 20px;
+	min-width: 400px;
+}
+
+.date__session{
+	min-width: 200px;
+}
+.date-container h3:hover{
+	cursor: pointer;
+}
+
+.date-container{
+	flex:2;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	margin-bottom: 50px;
+}
+
+.date-container h3{
+	text-align: left;
+	font-weight: 300;
+	padding-bottom: 5px;
+	position: relative;
+}
+
+.date-container h3:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 95%;
+	height: 0.5px;
+	background-color: #fff;
+	top:30px;
+	left:0;
+}
+
+.date-container h3:after, .date__session h3:after{
+	width:100%;
+}
+
+.date-container h3, .date__session h3{
+	margin-bottom: 20px;
+}
+
+
+.session{
+	display: flex;
+	flex-direction: column;
+}
+
+.session__item{
+	list-style:none;
+	color:white;
+	font-size: 16px;
+	font-weight: 300;
+	padding: 10px;
+	border:1px solid white;
+	width: 100%;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	margin-bottom: 5px;
+	transition: all 0.4s ease-out;
+}
+
+.date__hour ul{
+	display: flex;
+	justify-content: space-around; 
+}
+
+.date__hour ul li{
+	list-style:none;
+	color:white;
+	font-size: 16px;
+	border:1px solid white;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	margin-right: 5px;
+	transition: all 0.4s ease-out;
+}
+
+.date__hour ul li:last-child{
+	margin-right: 0px;
+}
+
+.date__hour ul li:hover,
+.date__session ul li:hover{
+	color:red;
+	cursor: pointer;
+	border:1px solid transparent;
+	transition: all .2s ease-in;
+}
+
+.date__hour ul li[selected='1'],
+.date__session ul li[selected='1']{
+	color:red !important;
+	border-color: red !important;
+}
+
+.disabled{
+	color:#222 !important;
+	cursor:help !important;
+	border:1px solid #222 !important;
+}
+
+
+.userdata{
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: 50px;
+}
+
+.userdata input{
+	border:none;
+	background-color: transparent;
+	color:white;
+	border-bottom: 1px solid white;
+	padding: 5px;
+	margin-bottom: 20px;
+	margin-right: 18px;
+	font-size: 16px;
+	font-weight: 100;
+	width: 100px;
+}
+
+.userdata input[name="email"]{
+	width: 190px;
+}
+
+.userdata input[name="phoneNumber"]{
+	width: 125px;
+}
+
+.userdata input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.6s ease;} 
+.userdata input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.6s ease;}
+
+.userdata ::placeholder
+{
+	color:rgba(255,255,255,0.4);
+}
+
+.userdata button{
+	display: block;
+	text-decoration: none;
+	color:white;
+	font-size: 16px;
+	background-color: transparent;
+	border:none;
+	width: 90px;
+	padding: 7px;
+	position: absolute;
+	top:70px;
+	font-family: 'Roboto',sans-serif;
+	font-weight: 300;
+	outline:none;
+}
+
+.userdata button[disabled="true"]:after,
+.userdata button[disabled="true"] span:after,
+.userdata button[disabled="true"]:before,
+.userdata button[disabled="true"] span:before
+{
+	display: none;
+}
+
+.session li{
+	position: relative;
+}
+
+.session li:hover{
+	cursor: pointer;
+}
+
+.session li:after, .session li:before,
+.session span:before, .session  span:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	background-color: red;
+	transition: all 0.4s;
+}
+
+.session li:after, .session li:before{
+	top:0;
+	right: 0;
+}
+
+.session span:before, .session  span:after{
+	bottom:0;
+	left: 0;
+}
+
+.session li:hover span:after,
+.session li:hover:after{
+	width: 10px;
+	height: 2px;
+}
+
+.session li:hover span:before,
+.session li:hover:before{
+	width: 2px;
+	height: 30px;
+}
+
+.date__hour li[class='']{
+	position: relative;
+}
+
+.date__hour li[class='']:hover{
+	cursor: pointer;
+}
+
+.date__hour li[class='']:after, .date__hour li[class='']:before,
+.date__hour span:before, .date__hour  span:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	background-color: red;
+	transition: all 0.4s;
+}
+
+.date__hour li[class='']:after, .date__hour li[class='']:before{
+	top:0;
+	right: 0;
+}
+
+.date__hour span:before, .date__hour  span:after{
+	bottom:0;
+	left: 0;
+}
+
+.date__hour li[class='']:hover span:after,
+.date__hour li[class='']:hover:after{
+	width: 10px;
+	height: 2px;
+}
+
+.date__hour li[class='']:hover span:before,
+.date__hour li[class='']:hover:before{
+	width: 2px;
+	height: 30px;
+}
+
+.userdata button:hover{
+	cursor: pointer;
+}
+
+.input-container input{
+	width: 150px;
+}
+
+.input-container input:first-child{
+	margin-right: 20px;
+}
+
+.input-container input:last-child{
+	margin-left: 20px;
+}
+
+.userdata button:after, .userdata button:before,
+.userdata span:before, .userdata  span:after{
+	content: "";
+	display: block;
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	background-color: red;
+	transition: all 0.4s;
+}
+
+.userdata button:after, .userdata button:before{
+	top:0;
+	right: 0;
+}
+
+.userdata span:before, .userdata  span:after{
+	bottom:0;
+	left: 0;
+}
+
+.userdata button:hover span:after,
+.userdata button:hover:after{
+	width: 10px;
+	height: 2px;
+}
+
+.userdata button:hover span:before,
+.userdata button:hover:before{
+	width: 2px;
+	height: 30px;
+}
+
+
+
+
+input[type='date']{
+	background-color: black;
+	color:white;
+	border:1px solid white;
+  	padding: 5px 7px;
+	width: 190px;
+	outline:none;
+}
+
+
+[type="date"] {
+  background: url(../img/calendar_2.png)  97% 50% no-repeat;
+}
+[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator:hover {
+  cursor: pointer;
+}
+input[type='date']:hover {
+	cursor: pointer;
+}
+
+
+
+.close{
+	position: absolute;
+	right: 0;
+	top:0;
+	width: 25px;
+	height: 25px;
+	background-color: black;
+	border-radius: 50%;
+	transform: translate(50%,-50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .3 ease-in;
+}
+
+.close img{
+	width: 10px;
+	height: 10px;
+}
+
+.close:hover{
+	cursor: pointer;
+	color:red;
+	border-color:red;
+}
+
+
+
+.redCorner-1:before,
+.redCorner-1:after,
+.redCorner-2:before,
+.redCorner-2:after{
+	position: absolute;
+	content: "";
+	display: block;
+	background-color: red;
+}
+
+.redCorner-1::before{
+	width: 50px;
+	height: 1px;
+	top:0px;
+	left:-10px;
+}
+.redCorner-1::after{
+	width: 1px;
+	height: 50px;
+	top:-10px;
+	left:0;
+}
+
+.redCorner-2:before{
+	width: 50px;
+	height: 1px;
+	right:-10px;
+	bottom: 0;
+}
+.redCorner-2:after{
+	width: 1px;
+	height: 50px;
+	right:0px;
+	bottom: -10px;
+}
+
