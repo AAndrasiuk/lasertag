@@ -1,4 +1,4 @@
 Landing design idea with a reservation system. 
 
 ## In plans
-### `Make this website responsiveness.`
+### `Make this website responsive.`
