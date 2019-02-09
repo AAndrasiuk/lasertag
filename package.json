@@ -2,10 +2,15 @@
   "name": "lasertag_landing",
   "version": "1.0.0",
   "description": "Lasertag Landing",
+  "homepage": "https://aandrasiuk.github.io/lasertag",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d lasertag"
   },
   "author": "Aliaksandr Andrasiuk",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  }
 }
