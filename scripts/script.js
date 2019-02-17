@@ -1,7 +1,7 @@
 const bodyWithoutReservation = document.querySelectorAll('header, footer, section:not(.reservation)');
-const reservationForm = document.querySelectorAll('.reservation div:not(.awaiter)');
-const reservationBtns = document.querySelectorAll('.action-btn');
-const formSubmit = document.querySelector('.userdata');
+const reservationForm        = document.querySelectorAll('.reservation div:not(.awaiter)');
+const reservationBtns        = document.querySelectorAll('.action-btn');
+const formSubmit             = document.querySelector('.userdata');
 
 reservationForm.forEach(el => el.style.opacity = 0);
 
@@ -25,7 +25,7 @@ let closeBtn = document.querySelector('.reservation .close');
 			toAnimateLightBackground(bodyWithoutReservation);	
 });
 
-function removeSelection(){
+const removeSelection = () => {
 	let toSelectionRemove = document.querySelectorAll('.reservation [selected="1"]');
 	for (selection of toSelectionRemove){
 		selection.removeAttribute('selected');
@@ -38,7 +38,7 @@ formSubmit.addEventListener('submit', function(e){
 	resetForm();
 })	
 
-function toAnimateDarkBackground(elements, from = 1, to = 0, interval = 40){
+const toAnimateDarkBackground = (elements, from = 1, to = 0, interval = 40) => {
 		let opacity = from;
 		let timeOut = setInterval(function(){
 			if (opacity <= to){
@@ -50,7 +50,7 @@ function toAnimateDarkBackground(elements, from = 1, to = 0, interval = 40){
 		}, interval);
 }
 
-function toAnimateLightBackground(elements, from = 0, to = 1, interval = 40){
+const toAnimateLightBackground = (elements, from = 0, to = 1, interval = 40) => {
 		let opacity = from;
 		let timeOut = setInterval(function(){
 			if (opacity >= to){
@@ -63,26 +63,8 @@ function toAnimateLightBackground(elements, from = 0, to = 1, interval = 40){
 }
 
 
-	var swiper = new Swiper('.swiper-container', {
-		slidesPerView: 1,
-		spaceBetween: 30,
-		loop: true,
-		autoplay: {
-			delay: 2500,
-			disableOnInteraction: false,
-			},
-			pagination: {
-				el: '.swiper-pagination',
-			clickable: true,
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-});
 
-
-function resetForm(){
+const resetForm = () => {
 	document.querySelector('.userdata input[name="name"]').value = "";
 	document.querySelector('.userdata input[name="surname"]').value = "";
 	document.querySelector('.userdata input[name="email"]').value = "";
@@ -92,6 +74,24 @@ function resetForm(){
 	selected = selected.forEach(sel => sel.removeAttribute('selected'));
 }
 
+
+let swiper = new Swiper('.swiper-container', {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	loop: true,
+	autoplay: {
+		delay: 2500,
+		disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+		clickable: true,
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+});
 
 
 

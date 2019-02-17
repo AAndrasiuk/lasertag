@@ -1,35 +1,42 @@
-jQuery(document).ready(function($) {
-	document.querySelector('.calendar input').setAttribute('min', getDate());
-	let awaiter = document.querySelector('.awaiter');
-	$('.calendar').change(function(){
+	const getDate = new Date().toJSON().slice(0, 10).replace(/-/g, '-');
+
+	document.querySelector('.calendar input').setAttribute('min', getDate);
+
+	const awaiter = document.querySelector('.awaiter');
+	
+	document.querySelector('.calendar').addEventListener('change', () => {
 		document.querySelector('input[name="hour"]').removeAttribute('value');
 		document.querySelector('input[name="duration"]').removeAttribute('value');
-		let reservedHours = `8.9.10.11.12.13.14.15`.split('.').map(el => +el);
+		let reservedHours = [12];
 		dataAwaitAnimationStart();
 		setTimeout(function(){
 			dataAwaitAnimationEnd();
 			showSessions();	
-			showHours();
+			showHours(reservedHours);
 			addSelection(reservedHours);
 		}, 500)
-	});
+	})
 
-	function getDate(){
-		return todayUTC = new Date().toJSON().slice(0, 10).replace(/-/g, '-');
-	}
+	
 
-	function showHours(){
+	const showHours = reservedHours => {
 		let ul = document.querySelector('.date__hour');
 		let list = '<h3>Wybierz godzinę:</h3><ul class="animated fadeInUp">';
 		
 		for (let i = 8; i <= 15; i++){
-			list += '<li class="" title="">' + i + '<span></span></li>';
+			let classes = '',
+					title = '';
+			if (reservedHours.includes(i)){
+					classes += 'disabled';
+					title    = 'Ta godzina jest zajęta';
+			}
+			list += '<li class="' + classes +'" title="'+ title +'">' + i + '<span></span></li>';
 		}
 			list += '</ul>';
-			ul.innerHTML = list;			
+			ul.innerHTML = list;						
 	}
 
-	function showSessions(){
+	const showSessions = () => { 
 		let ul = document.querySelector('.date__session');
 		let list = '<h3>Wybierz taryfę:</h3><ul class="session animated fadeInUp">';
 		let sessionsArray = ['10zł / 1 Godzina', '20zł / 2 Godziny', '0zł / 2 Godziny'];
@@ -41,7 +48,7 @@ jQuery(document).ready(function($) {
 	}
 
 
-	function addSelection(trueHours){
+	const addSelection = trueHours => {
 		let list = document.querySelectorAll('li[class=""]');
 		let sessions = document.querySelectorAll('li[class*="session__item"]');
 
@@ -73,7 +80,7 @@ jQuery(document).ready(function($) {
 		}	
 	}
 
-	function deleteSelection(type){
+	const deleteSelection = type => {
 		let selected;
 		if (type.getAttribute('class') !== ""){
 			selected = document.querySelectorAll('.date__session li[selected="1"]');	
@@ -86,7 +93,7 @@ jQuery(document).ready(function($) {
 		}
 	}
 	
-	function resetHours(trueHours){
+	const resetHours = trueHours => {
 		let hours = document.querySelectorAll('.date__hour li');
 		hours = [...hours];
 		for (let i = 8; i <= 15; i++){
@@ -96,18 +103,18 @@ jQuery(document).ready(function($) {
 		}
 	}
 
-	function dataAwaitAnimationStart(){
+	const dataAwaitAnimationStart = () => {
 		awaiter.style.display = "block";
 		toAnimateDarkBackground(reservationForm, 1, 0.3, 10);
 	}
 	
 
-	function dataAwaitAnimationEnd(){
+	const dataAwaitAnimationEnd =() => {
 		awaiter.style.display = "none";
 		toAnimateLightBackground(reservationForm, 0.3, 1, 10);
 	}
 
-	function disableHoursForSessionLength(){
+	const disableHoursForSessionLength = () => {
 		let hours = document.querySelectorAll('.date__hour li');
 		hours = [...hours];
 
@@ -117,7 +124,6 @@ jQuery(document).ready(function($) {
 			}
 		}
 	}
-});
 
 
 
