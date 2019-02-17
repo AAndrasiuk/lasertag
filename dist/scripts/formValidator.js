@@ -1,8 +1,8 @@
-	let form 				 = document.querySelector('.userdata');
-	let submitBtn 			 = document.querySelector('.userdata button');
-	let hour 				 = document.querySelector('input[name="hour"]');
-	let duration          = document.querySelector('input[name="duration"]');
-	let validateIt 		 = document.querySelectorAll(`input[name="name"], 
+	const form 				 = document.querySelector('.userdata');
+	const submitBtn 		 = document.querySelector('.userdata button');
+	const hour 				 = document.querySelector('input[name="hour"]');
+	const duration        = document.querySelector('input[name="duration"]');
+	const validateIt 		 = document.querySelectorAll(`input[name="name"], 
 																		input[name="surname"], 
 																		input[name="email"], 
 																		input[name="phoneNumber"],
@@ -11,13 +11,11 @@
 																		);
 	
 	
-	let nameRegExp 		 = /^[a-zA-z]{3,12}$/;
-	let emailRegExp       = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
-	let phoneNumberRegExp = /^(?:\(?\+?48)?(?:[-\.\(\)\s]*(\d)){9}\)?$/;	
-	let dateRegExp 		 = /^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
-	let hourRegExp    	 = /^[0-9]{1,2}$/;
-	let durationRegExp    = /^[0-9]{1}$/;
-	let validationResult  = {
+	const nameRegExp 		   = /^[a-zA-z]{3,12}$/;
+	const emailRegExp       = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
+	const phoneNumberRegExp = /^(?:\(?\+?48)?(?:[-\.\(\)\s]*(\d)){9}\)?$/;	
+	const dateRegExp 		   = /^[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])$/;
+	const validationResult  = {
 		name 				: false,
 		surname 			: false,
 		phoneNumber 	: false,
@@ -85,7 +83,7 @@
 	durationObserver.observe(duration, {attributes:true});
 	
 
-	function colorChanger(obj, res){
+	const colorChanger = (obj, res) => {
 		if (res){
 			obj.style.color = "rgba(255, 255, 255, 1)";
 			validationResult[obj.getAttribute('name')] = true;
@@ -97,7 +95,7 @@
 		}
 	}
 	
-	function allowSubmit(){
+	const allowSubmit = () => {
 		!validationResult.isAllTrue() 
 			? submitBtn.setAttribute('disabled','true')
 			: submitBtn.removeAttribute('disabled') 
