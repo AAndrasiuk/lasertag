@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "gh-pages -d lasertag"
+    "deploy": "gh-pages -d dist"
   },
   "author": "Aliaksandr Andrasiuk",
   "license": "MIT",

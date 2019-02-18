@@ -65,8 +65,6 @@ body{
 
 
 
-
-
 /* HEADER START */
 
 header{
@@ -649,7 +647,7 @@ div[class*="offer__item"] .cross-4{
 /* _____________________________________________________________ */
 
 
-/* GAllery START */
+/* GALLERY START */
 
 .gallery{
     height: 90vh;
@@ -975,8 +973,6 @@ input:focus{
 
 .img-container img{
     position: absolute;
-    /* right:-180px; */
-    /* top:100px; */
     right:0;
     top:100px;
 }
@@ -1007,8 +1003,6 @@ input:focus{
 
 .img-container-2 img{
     position: absolute;
-    /* left:-180px;
-    top:150px; */
     left:0;
     top:150px;
 }
