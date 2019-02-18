@@ -1,4 +1,3 @@
-
 ### Landing design idea with a reservation system. ###
 ----
 Landing includes gallery, Google Maps and contact form. 
@@ -7,3 +6,5 @@ Animation was added by **JQuery** plugin **'Revealator'**.
 Reservation system and validation were written using **Vanilla JS**. 
 ##### In plans #####
 - Make this website responsive.
+
+
