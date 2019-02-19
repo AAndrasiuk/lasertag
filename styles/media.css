@@ -100,7 +100,7 @@
 
   .questions-container{
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(1, 1fr 2fr);
+		grid-template-rows: 1fr 2fr 2fr 1fr;
 		grid-gap: 50px;
 	}
 	.question-container-1{
@@ -192,6 +192,10 @@
 	.questions-container{
 		font-size: 1rem;
 	}
+
+	.question-container-1{
+	align-self: flex-end;
+  }
 
 	.img-container-1 span:before,
 	.img-container-2 span:before{

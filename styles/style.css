@@ -950,15 +950,16 @@ input:focus{
     left: 0px;
 }
 
-    .questions h2{
-        margin-bottom: 150px;
-    }
+.questions h2{
+    margin-bottom: 100px;
+}
 
 .questions-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 50px;
+    justify-content: center;
 }
 
 .question-container-1{
@@ -986,7 +987,7 @@ input:focus{
     z-index: 1;
 }
 
-.img-container-1 span:before,
+/* .img-container-1 span:before,
 .img-container-2 span:before{
     content: "";
     display: block;
@@ -997,7 +998,7 @@ input:focus{
     left: 10%;
     top: -20px; 
     z-index: -1;
-}
+} */
 
 .img-container-2{
     z-index: 1;
