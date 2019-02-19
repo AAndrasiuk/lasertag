@@ -62,39 +62,22 @@ body{
 /* HEADER START */
 
 header{
-    background-image: url(../img/background2_4.jpg);
+    background-image: url(../img/background2_3.jpg);
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     padding: 50px 0;
 }
 
-/* .header-nav{
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-*/
 header h1, .header_desc, .header_hours {
     text-transform: uppercase;
 }
-/*
-.header_hours{
-    margin-top: 10px;
-}
 
-*/
 .header_desc{
  font-size: 1.2rem;
 }
 
 .header-nav-right{
-    /* height: 100%; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: flex-end; */
-    /* justify-content: center; */
     position: relative;
 }
 
@@ -164,11 +147,7 @@ header h1, .header_desc, .header_hours {
     font-size: 1.6rem;
     margin-top: 40px;
     text-align: center;
-    /* height: 150px; */
     text-transform: uppercase;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
 }
 
 .header-call-to-action span{
@@ -658,7 +637,7 @@ div[class*="offer__item"] .cross-4{
 
 .gallery{
     position: relative;
-    padding: 150px 0 0;
+    padding: 150px 0;
 }
 
 
@@ -719,7 +698,6 @@ div[class*="offer__item"] .cross-4{
 /* MAP START */
 
 .map{
-    margin-top: 250px;
     height: auto;
     position: relative;
     padding: 150px 0;
@@ -736,10 +714,13 @@ div[class*="offer__item"] .cross-4{
     top: 0px;
     left: 0px;
 }
+
+.map h2{
+    margin-bottom: 150px;
+}
 .map__item{
     height: 450px;
     width: 100%;
-    margin-top: 150px;
     background-color: #E5E3DF;
 }
 
@@ -753,7 +734,6 @@ div[class*="offer__item"] .cross-4{
 /* CONTACT START */
 
 .contact{
-    margin-top: 250px;
     height: auto;
     position: relative;
     padding: 150px 0;
@@ -774,8 +754,11 @@ div[class*="offer__item"] .cross-4{
     right: 0px;
 }
 
+.contact h2{
+    margin-bottom: 150px;
+}
+
 .contact-container{
-    margin-top: 150px;
     display: grid;
     grid-template-columns:1fr 2fr;
     justify-items: center;
@@ -965,8 +948,11 @@ input:focus{
     left: 0px;
 }
 
+    .questions h2{
+        margin-bottom: 150px;
+    }
+
 .questions-container{
-    margin-top: 150px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
