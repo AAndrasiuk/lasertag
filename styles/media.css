@@ -186,6 +186,7 @@
 	.form-info{
 		flex-direction: column;
 		align-items: flex-end;
+		margin: 0 auto;
 	}
 
 	.questions-container{
@@ -232,7 +233,7 @@
   }
 
   .header_phone, .header_hours{
-	  font-size: 0.8rem;
+	  font-size: 0.7rem;
   }
 
   .definition{
@@ -241,6 +242,21 @@
 
 	.audience-container{
 		padding: 150px 50px;
+  }
+
+  .audience-info p {
+		font-size: 0.8rem;
+  }
+
+  .audience-info-left p {
+		margin-left: 0;
+  }
+  .audience-info-right p {
+		margin-right: 0;
+  }
+
+  .offers-container p{
+	  font-size: 1.2rem;
   }
 
   .gallery{
