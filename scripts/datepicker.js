@@ -17,8 +17,6 @@
 		}, 500)
 	})
 
-	
-
 	const showHours = reservedHours => {
 		let ul = document.querySelector('.date__hour');
 		let list = '<h3>Wybierz godzinę:</h3><ul class="animated fadeInUp">';
