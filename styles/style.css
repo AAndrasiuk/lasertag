@@ -751,6 +751,9 @@ div[class*="offer__item"] .cross-4{
     right: 0px;
 }
 
+    .contact h2{
+        margin-bottom: 100px;
+    }
 
 .contact-container{
     display: grid;
