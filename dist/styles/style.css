@@ -476,9 +476,6 @@ div[class*="offer__item"] .cross-4{
     right: 0px;
 }
 
-.scenario h2{
-    margin-bottom: 150px;
-}
 
 .scenario-container span{
     color:white;
@@ -754,14 +751,12 @@ div[class*="offer__item"] .cross-4{
     right: 0px;
 }
 
-.contact h2{
-    margin-bottom: 150px;
-}
 
 .contact-container{
     display: grid;
     grid-template-columns:1fr 2fr;
     justify-content: center;
+    grid-gap: 50px;
 }
 
 .form-info{
@@ -816,7 +811,13 @@ div[class*="offer__item"] .cross-4{
     margin-right:25px;	
 }
 
-
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 
 .contact-form input{
     border:none;
@@ -826,7 +827,7 @@ div[class*="offer__item"] .cross-4{
     text-transform: capitalize;
     padding: 7px;
     margin-bottom: 20px;
-    width: 100%;
+    width: 90%;
     font-size: 16px;
     transition: all .3 ease-in-out;
 }
@@ -844,6 +845,7 @@ input:focus{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 90%;
     
 }
 .input-container input{
@@ -1011,8 +1013,6 @@ input:focus{
 /* FOOTER START */
 
 footer{
-    margin-top: 150px;
-    height: auto;
     position: relative;
     padding-top: 50px;
     padding-bottom: 20px;
