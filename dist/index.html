@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="./img/icon_lasertag.png" type="image/png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/reservation.css">
+    <link rel="stylesheet" href="styles/media.css">
     <title>Lasertag</title>
 </head>
 <body>
@@ -67,7 +69,40 @@
     
 
     <header>
-        <div class="wrapper">
+        <div class="container">
+            <div class="row">
+            <nav class="header-nav d-flex justify-content-between col-12">
+                <div class="header-nav-left animated fadeInLeft col">
+                    <div class="header_logo"><h1>Laser<span>tag</span></h1></div>
+                    <p class="header_desc"><span>Gry w rzeczywistości</span></p>
+                </div>
+                <div class="header-nav-right  animated fadeInRight col d-flex flex-column align-items-end">
+                    <p class="header_phone">(48) 777 555 323</p>
+                    <p class="header_hours">otwarte od  8 do 15.00</p>
+                </div>
+            </nav>
+        </div>
+
+            <div class="row justify-content-start">
+                <div class="col-12 col-md-4 col-lg-4 col-xl-4 d-flex justify-content-start">
+                    <ul class="header-benefits animated fadeInLeft">
+                        <li class="benefits__item benefits__item__first">Najnowszy sprzęt</li>
+                        <li class="benefits__item">Obszar 2500m<sup>2</sup></li>
+                        <li class="benefits__item">Niskie Ceny</li>
+                        <li class="benefits__item benefits__item__last">Atrakcyjne Scenarisuze</li>
+                    </ul>  
+            </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="header-call-to-action animated fadeInUp col-12 col-md-6 d-flex flex-column align-items-center">
+                    <span>Podoba się aktywna rekreacja?</span>
+                    <span>zapraszamy!</span>
+                    <a href="#" class="action-btn">zapisz się</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="wrapper">
             <nav class="header-nav">
                 <div class="header-nav-left  animated fadeInLeft">
                     <div class="header_logo"><h1>Laser<span>tag</span></h1></div>
@@ -91,11 +126,34 @@
                 <span>zapraszamy!</span>
                 <a href="#" class="action-btn">zapisz się</a>
             </div>
-        </div>
+        </div> -->
     </header>
 
     <section class="definition">
-        <div class="wrapper">
+        <div class="container">
+            <!-- <div class="definition-container revealator-slideup"> -->
+                <div class="row">
+            <div class="definition-container ">
+                <div class="definition-desc">
+                    <h2>co to jest <span>lasertag</span></h2>
+                    <p><span>Lasertag</span> - nowoczesna gra, która rozgrywa się w czasie rzeczywistym 
+                    i przestrzeni. Istotą gry jest pokonać graczy, wrogów bezpiecznymi 
+                    laserowymi strzałami z diodami-automatu. W trakcie strzelanin tutaj nie są
+                    używane amunicji, które mogą zranić gracza. Na głowach graczy znajdują się
+                    specjalistyczne czujniki sygnalizujące o trafieniu. Właściwie "porażka"
+                    gracza odbywa się poprzez rejestrację wiązki z diodami-automatu specjalnymi 
+                    czujnikami, mocowanymi na stroju zawodnika.</p>
+                </div>
+                <!-- <div class="definition-img revealator-slideup"> -->
+                <div class="definition-img">
+                    <img src="img/definition_1_2.png" alt="definiiton">
+                    <span></span>
+                    <div class="definition-img__bg"></div>
+                </div>
+            </div>
+    </div>
+        </div>
+        <!-- <div class="wrapper">
             <div class="definition-container revealator-slideup">
                 <div class="definition-desc">
                     <h2>co to jest <span>lasertag</span></h2>
@@ -114,35 +172,80 @@
                 </div>
                 
         </div>
-        </div>
+        </div> -->
     </section>
 
     <section class="audience">
-            <div class="wrapper">
-                <div class="audience-container">
-                    <h2><span>dla kogo</span> to jest?</h2>
-                    <div class="audience-info">
-                        <div class="audience-info-left revealator-slideright">
-                            <p>Wziąć udział w zawodach mogą nawet najmłodsi. Zalecany wiek dla dzieci
-                               od 6 lat.<br> Ważne jest, aby zauważyć, że dla małych rekrutów
-                               organizowane są specjalne imprezy. Chłopcy są pod nadzorem 
-                               doświadczonych instruktorów, którzy pomogą uniknąć błędów, 
-                               a także nauczą szczegółach postępowania z gry amunicją.</p>
-                            <img src="img/audience_boy3.png" alt="">
-                        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="audience-container">
+                        <h2><span>dla kogo</span> to jest?</h2>
+                        <div class="audience-info">
+                            <div class="audience-info-left revealator-slideright">
+                            <!-- <div class="audience-info-left "> -->
+                                <p>Wziąć udział w zawodach mogą nawet najmłodsi. Zalecany wiek dla dzieci
+                                    od 6 lat.<br> Ważne jest, aby zauważyć, że dla małych rekrutów
+                                    organizowane są specjalne imprezy. Chłopcy są pod nadzorem 
+                                    doświadczonych instruktorów, którzy pomogą uniknąć błędów, 
+                                    a także nauczą szczegółach postępowania z gry amunicją.
+                                </p>
+                                <img src="img/audience_boy3.png" alt="">
+                            </div>
     
-                        <div class="audience-info-right revealator-slideleft">
-                                <img src="img/audience_man2.png" alt="">    
-                                <p>Dzięki produkcji ogromnej ilości adrenaliny, masa pozytywnych 
-                                   cji, a także ciągłego ducha rywalizacji podczas gry w laser
-                                   tag jest idealny dla mężczyzn..</p> 
+                            <div class="audience-info-right revealator-slideleft">
+                                <!-- <div class="audience-info-right "> -->
+                            <img src="img/audience_man2.png" alt="">    
+                            <p>Dzięki produkcji ogromnej ilości adrenaliny, masa pozytywnych 
+                                cji, a także ciągłego ducha rywalizacji podczas gry w laser
+                                tag jest idealny dla mężczyzn..
+                            </p> 
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
     </section>
 
     <section class="offer">
+        <div class="container">
+            <div class="offer-container">
+                <h2>nasza <span>oferta</span></h2>
+                <div class="offers-container">
+                    <div class="offer__item offer__item-1 ">
+                        <img src="img/offer_1.png" alt="obszar">
+                        <p>Ogromny obszar do przestronności i nurkowania w grę</p>
+                        <span>Obszar 2500m<sup>2</sup></span>
+                        <img src="img/cross.png" alt="" class="cross cross-1">
+                        <img src="img/cross.png" alt="" class="cross cross-2">
+                        <img src="img/cross.png" alt="" class="cross cross-3">
+                        <img src="img/cross.png" alt="" class="cross cross-4">
+                    </div>
+
+                    <div class="offer__item offer__item-2 ">
+                        <img src="img/offer_2.png" alt="scenariusze">
+                        <p>Atrakcyjne scenariusze, aby poczuć się jak na prawdziwym polu bitwy</p>
+                        <span>Scenariusze</span>
+                        <img src="img/cross.png" alt="" class="cross cross-1">
+                        <img src="img/cross.png" alt="" class="cross cross-2">
+                        <img src="img/cross.png" alt="" class="cross cross-3">
+                        <img src="img/cross.png" alt="" class="cross cross-4">
+                    </div>
+
+                    <div class="offer__item offer__item-3 ">
+                        <img src="img/offer_3.png" alt="ceny">
+                        <p>Początkowa cena od 0zl<sup>*</sup></p>
+                        <span>niskie ceny</span>
+                        <img src="img/cross.png" alt="" class="cross cross-1">
+                        <img src="img/cross.png" alt="" class="cross cross-2">
+                        <img src="img/cross.png" alt="" class="cross cross-3">
+                        <img src="img/cross.png" alt="" class="cross cross-4">
+                    </div>    
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- <section class="offer">
         <div class="wrapper">
             <div class="offer-container">
                 <h2>nasza <span>oferta</span></h2>
@@ -181,10 +284,44 @@
                 
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="scenario">
-        <div class="wrapper">
+        <div class="container">
+            <h2><span>scenariusze</span></h2>
+
+            <div class="scenario-container">
+                    <div class="scenario__item ">
+                        <img src="img/scenario_1.png" alt="obszar">
+                        <span>punkt przechwytywania</span>
+                        <p>Scenariusz, stworzony na podstawie gry komputerowej "Battlefield".
+                            W bitwach może uczestniczyć maksymalnie cztery drużyny. Zadaniem każdej
+                            – uchwycić i jak może długo utrzymywać punkty kontrolne, bez pozwalania
+                            rywalom na zbliżanie się do nich.</p>  
+                    </div>
+
+                    <div class="scenario__item ">
+                        <img src="img/scenario_2.png" alt="obszar">
+                        <span>Przechwytywanie flagi</span>
+                        <p>Gracze dzielą się na dwie drużyny o równej liczbie uczestników i
+                            zajmują pozycje w swoich bazach. Na bazie każda drużyna ustawia się 
+                            apteczka i flagę odpowiedniego koloru. Aby wygrać, drużyna musi zdobyć 
+                            flagę przeciwnika i dostarczyć ją do swojej bazy.</p>  
+                    </div>
+
+                    <div class="scenario__item scenario__item-3">
+                        <img src="img/scenario_3.png" alt="obszar">
+                        <span>szturm</span>
+                        <p>Ten scenariusz  cenione za doskonałą dynamikę. Zespół mieści się w 
+                            budynku lub wysokość. Drugi zespół musi wziąć obiekt przez burzę i 
+                            zniszczyć wszystkich żołnierzy wroga. U napastników ma przewagę: mogą 
+                            "ożywają" u siebie na bazie danych za pomocą apteczki.</p>  
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="scenario">
+        <div class="container">
             <h2><span>scenariusze</span></h2>
 
             <div class="scenario-container">
@@ -216,9 +353,38 @@
                     </div>
             </div>
         </div>
-    </section>
+    </section> -->
  
     <section class="price">
+            <div class="container">
+                <h2><span>ceny</span></h2>
+                <div class="price-container">
+                    <div class="price__item ">
+                        <div class="price__item-info">
+                            <p class="price-pln">pln <span>20</span></p>
+                            <p class="price-time">1 godzina</p>
+                        </div>
+                        <a href="#" class="action-btn action-btn-1">zapisz się</a>
+                    </div>
+                    <div class="price__item ">
+                        <div class="price__item-info">
+                            <p class="price-pln">pln <span>30</span></p>
+                            <p class="price-time">2 godziny</p>
+                        </div>
+                        <a href="#" class="action-btn action-btn-2">zapisz się</a>
+                    </div>
+                    <div class="price__item price__item-3">
+                        <p class="birthday">masz <span>urodziny?<sup>*</sup></span></p>
+                        <div class="price__item-info">
+                            <p class="price-pln">pln <span>0<sup>*</sup></span></p>
+                            <p class="price-time">2 godziny</p>
+                        </div>
+                        <a href="#" class="action-btn action-btn-3">zapisz się</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- <section class="price">
             <div class="wrapper">
                 <h2><span>ceny</span></h2>
                 <div class="price-container">
@@ -246,15 +412,14 @@
                     </div>
                 </div>
             </div>
-    </section>
+    </section> -->
 
     <section class="gallery">
-        <div class="wrapper">
+        <div class="container">
             <h2><span>galeria</span></h2> 
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"> <img src="img/IMG_9306_md.jpg" /></div>
-                <div class="swiper-slide"> <img src="img/img_11.jpg" /></div>
                 <div class="swiper-slide"> <img src="img/IMG_9236_md.jpg" /></div>
                 <div class="swiper-slide"> <img src="img/IMG_9477_md.jpg" /></div>
                 <div class="swiper-slide"> <img src="img/IMG_5635_md.jpg" /></div>
@@ -268,8 +433,8 @@
 
     </section> 
        
-    <section class="map">
-        <div class="wrapper">
+    <!-- <section class="map">
+        <div class="container">
             <h2>My <span>na mapie</span></h2>
             </div>
             <div class="map__item">
@@ -277,10 +442,49 @@
                      width="100%" height="450" class="revealator-fade" frameborder="0" style="border:0" allowfullscreen>
                 </iframe>
             </div>
-    </section>
+    </section> -->
     
     <section class="contact">
-        <div class="wrapper">
+        <div class="container">
+            <h2><span>skontaktuj sie</span> z nami</h2>
+
+            <div class="contact-container">
+                <div class="form-info">
+                    <div class="form-info__item">
+                        <p>(48) 777 555 323</p>
+                        <div class="img-cont">
+                            <img src="img/contact_form_1.png" alt="phone">
+                        </div>
+                    </div>
+                    <div class="form-info__item">
+                            <p>Ul. Sidorska 12A</p>
+                            <div class="img-cont">
+                                <img src="img/contact_form_2.png" alt="adres">
+                            </div>
+                    </div>
+                    <div class="form-info__item">
+                                <p>Lasertag@gmail.com</p>
+                                <div class="img-cont">
+                                    <img src="img/contact_form_3.png" alt="email">
+                                </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" autocomplete="off">
+                    <div class="input-container">
+                        <input type="text" placeholder="imie" required name="form_name">
+                        <input type="text" placeholder="nazwisko" required name="form_surname">
+                        <input type="text" placeholder="Nr. telefonu" required name="form_phoneNumber">
+                    </div>
+                    <input type="text" placeholder="Temat" required name="form_topic">
+                    <input type="text-are" placeholder="Tekst" required name="form_text">
+                    <button>Wyślij <span></span></button>
+                </form>
+            </div>
+        </div>
+    </section> 
+    <!-- <section class="contact">
+        <div class="container">
             <h2><span>skontaktuj sie</span> z nami</h2>
 
             <div class="contact-container revealator-zoomin">
@@ -317,30 +521,29 @@
                 </form>
             </div>
         </div>
-    </section> 
+    </section>  -->
     
     <section class="questions">
-        <div class="wrapper">
+        <div class="container">
             <h2><span>q/a</span></h2>
             <div class="questions-container ">
-                <div class="question-section revealator-slideright">
-                    
-                    <div class="question-container ">
+                <!-- <div class="question-section revealator-slideright"> -->
+                    <div class="question-container question-container-1">
                         <p class="question">Q : Czy granie w lasertag jest bezpieczne?</p>  
                         <p class="answer"><span>A</span> : Walki z użyciem broni laserowej, w przeciwieństwie do 
                             paintballa, nie stanowią bezpośredniego kontaktu między pociskiem i "ofiarą". 
                             W zakresie ryzyka obrażeń laser tag jest jednym z najbardziej bezpiecznych 
-                            atrakcji.</p>
+                            atrakcji.
+                        </p>
                     </div>
 
-                    <div class="img-container">
+                    <div class="img-container img-container-1">
                         <span></span>
                         <img src="img/questions_1.png" alt="">
                     </div>
-                </div>
 
               
-                <div class="question-section revealator-slideleft">
+                <!-- <div class="question-section revealator-slideleft"> -->
                         <div class="img-container img-container-2">
                                 <span></span>
                                 <img src="img/questions_2.png" alt="">
@@ -351,15 +554,15 @@
                                     lasertag?</p>  
                             <p class="answer"><span>A</span> : Minimalna ilość osób wymagana do organizacji 
                                 pełnych walk, wynosi 6 szt. Jeśli w działaniach będą zaangażowane obie areny 
-                                klubu "Koszary", zaleca się zebrać grupę 8 osób.</p>
+                                klubu "Koszary", zaleca się zebrać grupę 8 osób.
+                            </p>
                         </div>
-                </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="wrapper">
+        <div class="container">
             <div class="footer-container">
                 <div class="social">
                     <h2><span>znajdziesz nas</span> na:</h2>
@@ -380,7 +583,7 @@
                         <p><strong>otwarte od 8 do 15.00</strong></p>
                     </div>
                 </div>
-                <div class="copyright"><p>&#xa9;Aliaksandr Andrasiuk</p></div>
+                <p class="copyright">&#xa9;Aliaksandr Andrasiuk</p>
             </div>
         </div>
     </footer>
