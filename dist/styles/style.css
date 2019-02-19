@@ -761,7 +761,7 @@ div[class*="offer__item"] .cross-4{
 .contact-container{
     display: grid;
     grid-template-columns:1fr 2fr;
-    justify-items: center;
+    justify-content: center;
 }
 
 .form-info{

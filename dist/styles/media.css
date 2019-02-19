@@ -205,6 +205,11 @@
 @media only screen and (max-width: 576px){
 	body{font-size: 0.9rem;}
 
+	
+	header{
+		padding: 50px 50px;
+	}
+
 	.header-call-to-action{
 		margin-top: 50px;
 		height: 100px;
@@ -229,4 +234,24 @@
   .header_phone, .header_hours{
 	  font-size: 0.8rem;
   }
+
+  .definition{
+		padding: 150px 50px;
+	}
+
+	.audience-container{
+		padding: 150px 50px;
+  }
+
+  .gallery{
+		padding: 150px 50px;
+	}
+
+	.contact{
+		padding: 150px 50px;
+	}
+
+	.questions{
+		padding: 150px 50px;
+	}
 }	
