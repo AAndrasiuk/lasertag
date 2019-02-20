@@ -34,11 +34,22 @@
 }	
 
 @media only screen and (max-width: 992px){
+	.definition{
+		padding: 125px 0;
+	}
+
 	.definition-container{
 		display: grid;
 		grid-template-columns:1fr;
 		grid-template-rows: 1fr 1fr;
 		grid-gap: 50px;
+	}
+
+	.audience-container{
+		padding: 125px 0;
+	}
+	.audience-container h2{
+		margin-bottom: 0;
 	}
 
 	.audience-info{
@@ -55,6 +66,9 @@
 		max-height: 450px;
   }
  
+  .offer-container{
+	  padding: 125px 0;
+  }
 
   .offers-container{
 		grid-template-rows: 1fr 1fr;
@@ -66,7 +80,13 @@
 		grid-column: 1/ -1;
 	}
 
-	
+	.scenario{
+		padding: 125px 0 50px;
+	}
+
+	.scenario h2{
+		margin-bottom: 0;
+	}
 
 	.scenario-container{
 		grid-template-columns: 1fr 1fr;
@@ -86,6 +106,14 @@
 		padding: 50px 0;
 	}
 
+	.price{
+		padding: 125px 0;
+	}
+
+	.price-container{
+		padding: 100px 0 0;
+	}
+
 	.contact-container{
 		margin-top: 100px;
 		grid-template-columns:1fr;
@@ -94,11 +122,39 @@
 		font-size: 1rem;
   }
 
+  .gallery{
+	  padding: 125px 0;
+  }
+
+	.gallery h2{
+		margin-bottom: 50px;	
+	}
+
+	.map h2{
+		margin-bottom: 100px;
+	}
+
   .form-info{
 		flex-direction: row;
-		align-items: center;
+		justify-items: center;
+		justify-content: center;
 	}
   
+	.contact{
+		padding: 125px 0;
+	}
+
+	.contact h2{
+		margin-bottom: 0px;
+	}
+
+	.contact-container{
+		margin-top: 50px;
+	}
+
+	.questions{
+		padding: 125px 0;
+	}
 
   .questions-container{
 		grid-template-columns: 1fr;
@@ -117,6 +173,10 @@
 		padding-bottom: 0;
 	}
 
+	.img-container{
+		justify-self: center;
+	}
+
 	.img-container-2, .question-container-2{
 		margin-top: 0px;
   }
@@ -127,6 +187,10 @@
 		height: 10%;
 		left: 10%;
 		top: -20px; 
+	}
+
+	footer{
+		padding-top: 100px;
 	}
 	
 }	
@@ -145,6 +209,11 @@
 	.definition{
 		margin-top: 10px;
 		font-size: 1rem;
+		padding: 100px 0;
+	}
+
+	.audience-container{
+		padding: 100px 0;
 	}
 
 	.audience-info{
@@ -158,6 +227,10 @@
   
   .audience-info img:nth-child(2){
 		max-height: 450px;
+  }
+
+  .offer-container{
+	  padding: 100px 0;
   }
 
   .offers-container{
@@ -184,15 +257,52 @@
 		padding: 100px 0;
 	}
 
+	.price{
+		padding: 100px 0 50px;
+	}
+
 	.price-container{
+		padding: 100px 0;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	.gallery{
+		padding: 100px 0;
+	}
+
+	.gallery h2{
+		margin-bottom: 50px;
+	}
+
+	.map{
+		padding: 100px 0;
+	}
+
+	.map h2{
+		margin-bottom: 50px;
+	}
+
+	.contact{
+		padding: 100px 0;
 	}
 
 	.form-info{
 		flex-direction: column;
 		align-items: flex-end;
 		margin: 0 auto;
+	}
+
+	.form-info__item{
+		margin-bottom: 15px;
+	}
+
+	.questions{
+		padding: 100px 0 50px;
+	}
+
+	.questions h2{
+		margin-bottom: 50px;
 	}
 
 	.questions-container{
@@ -209,6 +319,10 @@
 		height: 10%;
 		left: 10%;
 		top: -20px; 
+	}
+
+	footer{
+		padding-top: 100px;
 	}
 
 }
