@@ -34,11 +34,22 @@
 }	
 
 @media only screen and (max-width: 992px){
+	.definition{
+		padding: 125px 0;
+	}
+
 	.definition-container{
 		display: grid;
 		grid-template-columns:1fr;
 		grid-template-rows: 1fr 1fr;
 		grid-gap: 50px;
+	}
+
+	.audience-container{
+		padding: 125px 0;
+	}
+	.audience-container h2{
+		margin-bottom: 0;
 	}
 
 	.audience-info{
@@ -55,6 +66,9 @@
 		max-height: 450px;
   }
  
+  .offer-container{
+	  padding: 125px 0;
+  }
 
   .offers-container{
 		grid-template-rows: 1fr 1fr;
@@ -64,6 +78,14 @@
 
 	.offer__item-3{
 		grid-column: 1/ -1;
+	}
+
+	.scenario{
+		padding: 125px 0 50px;
+	}
+
+	.scenario h2{
+		margin-bottom: 0;
 	}
 
 	.scenario-container{
@@ -84,6 +106,14 @@
 		padding: 50px 0;
 	}
 
+	.price{
+		padding: 125px 0;
+	}
+
+	.price-container{
+		padding: 100px 0 0;
+	}
+
 	.contact-container{
 		margin-top: 100px;
 		grid-template-columns:1fr;
@@ -92,11 +122,39 @@
 		font-size: 1rem;
   }
 
+  .gallery{
+	  padding: 125px 0;
+  }
+
+	.gallery h2{
+		margin-bottom: 50px;	
+	}
+
+	.map h2{
+		margin-bottom: 100px;
+	}
+
   .form-info{
 		flex-direction: row;
-		align-items: center;
+		justify-items: center;
+		justify-content: center;
 	}
   
+	.contact{
+		padding: 125px 0;
+	}
+
+	.contact h2{
+		margin-bottom: 0px;
+	}
+
+	.contact-container{
+		margin-top: 50px;
+	}
+
+	.questions{
+		padding: 125px 0;
+	}
 
   .questions-container{
 		grid-template-columns: 1fr;
@@ -115,6 +173,10 @@
 		padding-bottom: 0;
 	}
 
+	.img-container{
+		justify-self: center;
+	}
+
 	.img-container-2, .question-container-2{
 		margin-top: 0px;
   }
@@ -125,6 +187,10 @@
 		height: 10%;
 		left: 10%;
 		top: -20px; 
+	}
+
+	footer{
+		padding-top: 100px;
 	}
 	
 }	
@@ -143,6 +209,11 @@
 	.definition{
 		margin-top: 10px;
 		font-size: 1rem;
+		padding: 100px 0;
+	}
+
+	.audience-container{
+		padding: 100px 0;
 	}
 
 	.audience-info{
@@ -156,6 +227,10 @@
   
   .audience-info img:nth-child(2){
 		max-height: 450px;
+  }
+
+  .offer-container{
+	  padding: 100px 0;
   }
 
   .offers-container{
@@ -172,21 +247,62 @@
 		padding: 100px 0 0px;
 	}
 
+	.scenario h2{
+		margin-bottom: 0;
+	}
+
 	.scenario-container{
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
 		padding: 100px 0;
 	}
 
+	.price{
+		padding: 100px 0 50px;
+	}
+
 	.price-container{
+		padding: 100px 0;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
+	}
+
+	.gallery{
+		padding: 100px 0;
+	}
+
+	.gallery h2{
+		margin-bottom: 50px;
+	}
+
+	.map{
+		padding: 100px 0;
+	}
+
+	.map h2{
+		margin-bottom: 50px;
+	}
+
+	.contact{
+		padding: 100px 0;
 	}
 
 	.form-info{
 		flex-direction: column;
 		align-items: flex-end;
 		margin: 0 auto;
+	}
+
+	.form-info__item{
+		margin-bottom: 15px;
+	}
+
+	.questions{
+		padding: 100px 0 50px;
+	}
+
+	.questions h2{
+		margin-bottom: 50px;
 	}
 
 	.questions-container{
@@ -205,6 +321,10 @@
 		top: -20px; 
 	}
 
+	footer{
+		padding-top: 100px;
+	}
+
 }
 
 @media only screen and (max-width: 576px){
@@ -212,7 +332,7 @@
 
 	
 	header{
-		padding: 50px 50px;
+		padding: 50px 50px 100px;
 	}
 
 	.header-call-to-action{
@@ -240,16 +360,28 @@
 	  font-size: 0.7rem;
   }
 
+  .header-nav-right{
+	margin-top: 5px;
+  }
+
+  .header-nav-right:after{
+	  height: 50px;
+  }
+
   .definition{
-		padding: 150px 50px;
+		padding: 75px 50px;
 	}
 
 	.audience-container{
-		padding: 150px 50px;
+		padding: 75px 50px;
   }
 
+  .audience-container h2 {
+		margin-bottom: 50px;
+}
+
   .audience-info p {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
   }
 
   .audience-info-left p {
@@ -259,19 +391,94 @@
 		margin-right: 0;
   }
 
+  .offer-container{
+	  padding: 75px 0;
+  }
+
   .offers-container p{
 	  font-size: 1.2rem;
+	}
+
+	.offers-container{
+		margin-top: 50px;
+		grid-gap: 50px;
+	}
+  
+	.offer__item {
+		width: 250px;
+		height: 350px;
+		align-self: center;
+	}
+
+	.scenario-container{
+		padding: 50px 0;
+		grid-gap: 25px;
+	}
+
+	.scenario__item{
+		max-width: 350px;
+	}
+
+	.price-container{
+		padding: 50px 0; 
+	}
+
+  .price{
+	  padding: 50px 0;
+  }
+
+  .scenario {
+	  padding: 75px 0 0;
+  }
+
+  .map{
+	  padding: 75px 0;
+  }
+
+  .map h2{
+	  margin-bottom: 50px;
   }
 
   .gallery{
-		padding: 150px 50px;
+		padding: 75px 50px;
+	}
+
+	.gallery h2{
+		margin-bottom: 0;
+	}
+
+	.form-info__item{
+		margin-bottom: 10px;
+	}
+
+	.contact-container{
+		margin-top: 50px;
 	}
 
 	.contact{
-		padding: 150px 50px;
+		padding: 75px 50px 50px;
+	}
+
+	.contact h2{
+		margin-bottom: 0px;
+	}
+
+	.questions-container{
+		grid-gap: 0px;
 	}
 
 	.questions{
-		padding: 150px 50px;
+		padding: 50px 50px;
+	}
+	.questions h2{
+		margin-bottom: 50px;
+	}
+
+	.img-container{
+		align-self: center;
+	}
+
+	.copyright{
+		font-size: 0.7rem;
 	}
 }	
