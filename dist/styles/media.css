@@ -66,6 +66,8 @@
 		grid-column: 1/ -1;
 	}
 
+	
+
 	.scenario-container{
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
@@ -100,7 +102,7 @@
 
   .questions-container{
 		grid-template-columns: 1fr;
-		grid-template-rows: repeat(1, 1fr 2fr);
+		grid-template-rows: 1fr 2fr 2fr 1fr;
 		grid-gap: 50px;
 	}
 	.question-container-1{
@@ -172,6 +174,10 @@
 		padding: 100px 0 0px;
 	}
 
+	.scenario h2{
+		margin-bottom: 0;
+	}
+
 	.scenario-container{
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 1fr 1fr;
@@ -193,6 +199,10 @@
 		font-size: 1rem;
 	}
 
+	.question-container-1{
+	align-self: flex-end;
+  }
+
 	.img-container-1 span:before,
 	.img-container-2 span:before{
     	width: 60%;
@@ -208,7 +218,7 @@
 
 	
 	header{
-		padding: 50px 50px;
+		padding: 50px 50px 100px;
 	}
 
 	.header-call-to-action{
@@ -236,16 +246,28 @@
 	  font-size: 0.7rem;
   }
 
+  .header-nav-right{
+	margin-top: 5px;
+  }
+
+  .header-nav-right:after{
+	  height: 50px;
+  }
+
   .definition{
-		padding: 150px 50px;
+		padding: 75px 50px;
 	}
 
 	.audience-container{
-		padding: 150px 50px;
+		padding: 75px 50px;
   }
 
+  .audience-container h2 {
+		margin-bottom: 50px;
+}
+
   .audience-info p {
-		font-size: 0.8rem;
+		font-size: 0.9rem;
   }
 
   .audience-info-left p {
@@ -255,19 +277,94 @@
 		margin-right: 0;
   }
 
+  .offer-container{
+	  padding: 75px 0;
+  }
+
   .offers-container p{
 	  font-size: 1.2rem;
+	}
+
+	.offers-container{
+		margin-top: 50px;
+		grid-gap: 50px;
+	}
+  
+	.offer__item {
+		width: 250px;
+		height: 350px;
+		align-self: center;
+	}
+
+	.scenario-container{
+		padding: 50px 0;
+		grid-gap: 25px;
+	}
+
+	.scenario__item{
+		max-width: 350px;
+	}
+
+	.price-container{
+		padding: 50px 0; 
+	}
+
+  .price{
+	  padding: 50px 0;
+  }
+
+  .scenario {
+	  padding: 75px 0 0;
+  }
+
+  .map{
+	  padding: 75px 0;
+  }
+
+  .map h2{
+	  margin-bottom: 50px;
   }
 
   .gallery{
-		padding: 150px 50px;
+		padding: 75px 50px;
+	}
+
+	.gallery h2{
+		margin-bottom: 0;
+	}
+
+	.form-info__item{
+		margin-bottom: 10px;
+	}
+
+	.contact-container{
+		margin-top: 50px;
 	}
 
 	.contact{
-		padding: 150px 50px;
+		padding: 75px 50px 50px;
+	}
+
+	.contact h2{
+		margin-bottom: 0px;
+	}
+
+	.questions-container{
+		grid-gap: 0px;
 	}
 
 	.questions{
-		padding: 150px 50px;
+		padding: 50px 50px;
+	}
+	.questions h2{
+		margin-bottom: 50px;
+	}
+
+	.img-container{
+		align-self: center;
+	}
+
+	.copyright{
+		font-size: 0.7rem;
 	}
 }	

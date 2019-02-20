@@ -66,7 +66,7 @@ header{
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 50px 0;
+    padding: 50px 0 100px;
 }
 
 header h1, .header_desc, .header_hours {
@@ -476,6 +476,9 @@ div[class*="offer__item"] .cross-4{
     right: 0px;
 }
 
+.scenario h2{
+    margin-bottom: 150px;
+}
 
 .scenario-container span{
     color:white;
@@ -751,6 +754,9 @@ div[class*="offer__item"] .cross-4{
     right: 0px;
 }
 
+    .contact h2{
+        margin-bottom: 100px;
+    }
 
 .contact-container{
     display: grid;
@@ -950,15 +956,16 @@ input:focus{
     left: 0px;
 }
 
-    .questions h2{
-        margin-bottom: 150px;
-    }
+.questions h2{
+    margin-bottom: 100px;
+}
 
 .questions-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-gap: 50px;
+    justify-content: center;
 }
 
 .question-container-1{
@@ -986,7 +993,7 @@ input:focus{
     z-index: 1;
 }
 
-.img-container-1 span:before,
+/* .img-container-1 span:before,
 .img-container-2 span:before{
     content: "";
     display: block;
@@ -997,7 +1004,7 @@ input:focus{
     left: 10%;
     top: -20px; 
     z-index: -1;
-}
+} */
 
 .img-container-2{
     z-index: 1;
