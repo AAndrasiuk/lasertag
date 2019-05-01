@@ -2,80 +2,41 @@ const bodyWithoutReservation = document.querySelectorAll('header, footer, sectio
 const reservationForm        = document.querySelectorAll('.reservation div:not(.awaiter)');
 const reservationBtns        = document.querySelectorAll('.action-btn');
 const formSubmit             = document.querySelector('.userdata');
-
-reservationForm.forEach(el => el.style.opacity = 0);
-
-for (link of reservationBtns){
-	link.addEventListener('click', function(e){
-		e.preventDefault();
-		toAnimateDarkBackground(bodyWithoutReservation);
-		toAnimateLightBackground(reservationForm);
-		document.querySelector('.reservation').classList.remove('none');
-	})
-}
-
-let closeBtn = document.querySelector('.reservation .close');
-		closeBtn.addEventListener('click', function(){
-			toAnimateDarkBackground(reservationForm);	
-			setTimeout(function(){
-				document.querySelector('.reservation').classList.add('none');
-				resetForm();
-			}, 400);
-			removeSelection();
-			toAnimateLightBackground(bodyWithoutReservation);	
-});
+const closeBtn               = document.querySelector(".reservation .close");
+const duration 				  = document.querySelector('input[name="duration"]');
+const hour 				 		  = document.querySelector('input[name="hour"]');
 
 const removeSelection = () => {
-	let toSelectionRemove = document.querySelectorAll('.reservation [selected="1"]');
-	for (selection of toSelectionRemove){
-		selection.removeAttribute('selected');
-	}
+	let toRemoveSelection = document.querySelectorAll('.reservation [selected="1"]');
+	toRemoveSelection.forEach(selection => selection.removeAttribute('selected'));
 }
 
-formSubmit.addEventListener('submit', function(e){
-	e.preventDefault();
-	swal("Zapisałeś się!", "Niedługo z Tobą skontaktujemy się", "success")
-	resetForm();
-})	
+const animateBackground = (elements, from = 0, to = 1, interval = 40) => {
+   let opacity = from;
+   const value = 0.1;
+   const toDarken = from > to;
 
-const toAnimateDarkBackground = (elements, from = 1, to = 0, interval = 40) => {
-		let opacity = from;
-		let timeOut = setInterval(function(){
-			if (opacity <= to){
-				clearInterval(timeOut);
-			}else {	
-				opacity -= 0.1;
-				elements.forEach(el => el.style.opacity = opacity)		
-			}
-		}, interval);
-}
+   const timeOut = setInterval(() => {
+		toDarken
+			? opacity <= to && clearInterval(timeOut)
+			: opacity >= to && clearInterval(timeOut);
 
-const toAnimateLightBackground = (elements, from = 0, to = 1, interval = 40) => {
-		let opacity = from;
-		let timeOut = setInterval(function(){
-			if (opacity >= to){
-				clearInterval(timeOut);
-			}else {
-				opacity += 0.1;
-				elements.forEach(el => el.style.opacity = opacity)
-			}
-		}, interval);
-}
-
-
+	opacity += toDarken ? -value : value;
+	elements.forEach(el => el.style.opacity = opacity);
+		
+   }, interval);
+};
 
 const resetForm = () => {
-	document.querySelector('.userdata input[name="name"]').value = "";
-	document.querySelector('.userdata input[name="surname"]').value = "";
-	document.querySelector('.userdata input[name="email"]').value = "";
-	document.querySelector('.userdata input[name="phoneNumber"]').value = "";
+	document.querySelectorAll('.userdata input').forEach(input => input.value = "");
+
 	let selected = document.querySelectorAll('li[selected="1"]');
-	selected = [...selected];
-	selected = selected.forEach(sel => sel.removeAttribute('selected'));
+	selected = [...selected].forEach(sel => sel.removeAttribute('selected'));
+	hour.removeAttribute("value");
+	duration.removeAttribute("value");
 }
 
-
-let swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
 	slidesPerView: 1,
 	spaceBetween: 30,
 	loop: true,
@@ -93,6 +54,29 @@ let swiper = new Swiper('.swiper-container', {
 		},
 });
 
+animateBackground(reservationForm, 1, 0);
 
+for (link of reservationBtns){
+	link.addEventListener('click', e => {
+		e.preventDefault();
+		document.querySelector('.reservation').classList.remove('none');
+		animateBackground(bodyWithoutReservation, 1, 0);
+		animateBackground(reservationForm, 0, 1);
+	})
+}
 
-	
+closeBtn.addEventListener("click", () => {
+   animateBackground(reservationForm, 1, 0);
+   setTimeout(() => {
+      document.querySelector(".reservation").classList.add("none");
+      resetForm();
+   }, 400);
+	removeSelection();
+   animateBackground(bodyWithoutReservation, 0, 1);
+});
+
+formSubmit.addEventListener('submit', e => {
+	e.preventDefault();
+	swal("Zapisałeś się!", "Niedługo z Tobą skontaktujemy się", "success")
+	resetForm();
+})	
