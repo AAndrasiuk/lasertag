@@ -280,117 +280,177 @@
       height: 250px;
    }
 
-	/* GALLERY END */
-	
-	/* MAP */
+   /* GALLERY END */
 
-	.map{
-		padding: 50px 0;
-	}
+   /* MAP */
 
-	.map h2{
-		font-size: 1rem;
-		margin-bottom: 50px;
-	}
+   .map {
+      padding: 50px 0;
+   }
 
-	/* MAP  END*/
+   .map h2 {
+      font-size: 1rem;
+      margin-bottom: 50px;
+   }
 
-	/* CONTACT */
+   /* MAP  END*/
 
-	.contact{
-		padding: 50px 25px;
-	}
+   /* CONTACT */
 
-	.contact h2{
-		font-size: 1rem;
-		margin-bottom: 50px;
-	}
+   .contact {
+      padding: 50px 25px;
+   }
 
-	.contact-container{
-		grid-template-columns:1fr;
-		justify-items: center;
-	}
+   .contact h2 {
+      font-size: 1rem;
+      margin-bottom: 50px;
+   }
 
-	.contact-form{
-		width: 100%;
-	}
+   .contact-container {
+      grid-template-columns: 1fr;
+      justify-items: center;
+   }
 
-	.contact-form input{
-		font-size: .8rem;
-	}
+   .contact-form {
+      width: 100%;
+   }
 
-	.form-info__item{
-		margin-bottom: 20px;
-	}
+   .contact-form input {
+      font-size: 0.8rem;
+   }
 
-	.form-info__item p{
-		font-size: .8rem;
-	}
+   .form-info__item {
+      margin-bottom: 20px;
+   }
 
-	.input-container{
-		flex-direction: column;
-		width: 100%;
-	}
+   .form-info__item p {
+      font-size: 0.8rem;
+   }
 
-	.input-container input:first-child{
-		margin-right: 0;
-	}
+   .input-container {
+      flex-direction: column;
+      width: 100%;
+   }
 
-	.input-container input:last-child{
-		margin-left: 0;
-	}
+   .input-container input:first-child {
+      margin-right: 0;
+   }
 
-	.input-container input{
-		width: 90%;
-	}
+   .input-container input:last-child {
+      margin-left: 0;
+   }
 
-	/* CONTACT END */
+   .input-container input {
+      width: 90%;
+   }
 
-	/* QUESTIONS */
+   /* CONTACT END */
 
-	.questions{
-		padding: 50px 25px;
-	}
+   /* QUESTIONS */
 
-	.questions h2{
-		font-size: 1rem;
-		margin-bottom: 50px;
-	}
+   .questions {
+      padding: 50px 25px;
+   }
 
-	.questions-container{
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
-		grid-gap: 0;
-		font-size: 0.7rem;
-	}
+   .questions h2 {
+      font-size: 1rem;
+      margin-bottom: 50px;
+   }
 
-	.question-container-1{
-		margin-right: 0;
-	}
+   .questions-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 0;
+      font-size: 0.7rem;
+   }
 
-	.question-container-2{
-		margin-left: 0;
-		margin-top: 0;
-	}
+   .question-container-1 {
+      margin-right: 0;
+   }
 
-	.img-container img{
-		display: none;
-	}
+   .question-container-2 {
+      margin-left: 0;
+      margin-top: 0;
+   }
 
-	/* QUESTIONS END */
+   .img-container img {
+      display: none;
+   }
 
-	/* FOOTER */
+   /* QUESTIONS END */
 
-	footer h2{
-		font-size: 1rem;
-	}
+   /* FOOTER */
 
-	.footer-container .info p{
-		font-size: .7rem;
-	}
+   footer h2 {
+      font-size: 1rem;
+   }
 
+   .footer-container .info p {
+      font-size: 0.7rem;
+   }
 
-	/* FOOTER END */
+   /* FOOTER END */
+
+   /* RESERVATION */
+
+   .calendar {
+      margin-top: 20px;
+      margin-bottom: 75px;
+   }
+
+   .date-container {
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 100px;
+   }
+
+   .date-container ul{
+      margin-bottom: 0;
+   }
+
+   .date__session, .date__hour{
+      padding: 10 40px;
+   }
+
+   .date-container h3 {
+      text-align: center;
+      font-size: 1.2rem
+   }
+
+   .session__item{
+      height: 35px;
+   }
+
+   .date__hour ul li{
+      height: 35px;
+      width: 35px;
+      margin: 0;
+   }
+
+   .date__hour ul{
+      padding: 0 20px;
+   }
+
+   .userdata{
+      flex-direction: column;
+      margin-bottom: 50px;
+   }
+
+   .date-container h3:after{
+      display: none;
+   }
+   
+   .userdata input, .userdata input[name="phoneNumber"]{
+      padding: 0;
+      width: 100%;
+      margin-right: 0;
+   }
+
+   .userdata button{
+      top: 90%;
+   }
+
+   /* RESERVATION END */
 }
 
 @media (min-width: 576px) and (max-width: 765px) {
@@ -612,116 +672,177 @@
       margin-bottom: 50px;
    }
 
-	/* GALLERY END */
-	
-	/* MAP */
+   /* GALLERY END */
 
-	.map{
-		padding: 50px 0;
-	}
+   /* MAP */
 
-	.map h2{
-		font-size: 1.4rem;
-		margin-bottom: 50px;
-	}
-	/* MAP END */
+   .map {
+      padding: 50px 0;
+   }
 
-	/* CONTACT */
+   .map h2 {
+      font-size: 1.4rem;
+      margin-bottom: 50px;
+   }
+   /* MAP END */
 
-	.contact{
-		padding: 50px 25px;
-	}
+   /* CONTACT */
 
-	.contact h2{
-		font-size: 1.2rem;
-		margin-bottom: 50px;
-	}
+   .contact {
+      padding: 50px 25px;
+   }
 
-	.contact-container{
-		grid-template-columns:1fr;
-		justify-items: center;
-	}
+   .contact h2 {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+   }
 
-	.contact-form{
-		width: 100%;
-	}
+   .contact-container {
+      grid-template-columns: 1fr;
+      justify-items: center;
+   }
 
-	.contact-form input{
-		font-size: 1rem;
-	}
+   .contact-form {
+      width: 100%;
+   }
 
-	.form-info__item{
-		margin-bottom: 20px;
-	}
+   .contact-form input {
+      font-size: 1rem;
+   }
 
-	.form-info__item p{
-		font-size: 1rem;
-	}
+   .form-info__item {
+      margin-bottom: 20px;
+   }
 
-	.input-container{
-		flex-direction: column;
-		width: 100%;
-	}
+   .form-info__item p {
+      font-size: 1rem;
+   }
 
-	.input-container input:first-child{
-		margin-right: 0;
-	}
+   .input-container {
+      flex-direction: column;
+      width: 100%;
+   }
 
-	.input-container input:last-child{
-		margin-left: 0;
-	}
+   .input-container input:first-child {
+      margin-right: 0;
+   }
 
-	.input-container input{
-		width: 90%;
-	}
+   .input-container input:last-child {
+      margin-left: 0;
+   }
 
-	/* CONTACT END */
+   .input-container input {
+      width: 90%;
+   }
 
-	/* QUESTIONS */
+   /* CONTACT END */
 
-	.questions{
-		padding: 50px 25px;
-	}
+   /* QUESTIONS */
 
-	.questions h2{
-		font-size: 1.2rem;
-		margin-bottom: 50px;
-	}
+   .questions {
+      padding: 50px 25px;
+   }
 
-	.questions-container{
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
-		grid-gap: 0;
-		font-size: 1rem;
-	}
+   .questions h2 {
+      font-size: 1.2rem;
+      margin-bottom: 50px;
+   }
 
-	.question-container-1{
-		margin-right: 0;
-	}
+   .questions-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 0;
+      font-size: 1rem;
+   }
 
-	.question-container-2{
-		margin-left: 0;
-		margin-top: 0;
-	}
+   .question-container-1 {
+      margin-right: 0;
+   }
 
-	.img-container img{
-		display: none;
-	}
+   .question-container-2 {
+      margin-left: 0;
+      margin-top: 0;
+   }
 
-	/* QUESTIONS END */
+   .img-container img {
+      display: none;
+   }
 
-	/* FOOTER */
+   /* QUESTIONS END */
 
-	footer h2{
-		font-size: 1.2rem;
-	}
+   /* FOOTER */
 
-	.footer-container .info p{
-		font-size: 1rem;
-	}
+   footer h2 {
+      font-size: 1.2rem;
+   }
 
+   .footer-container .info p {
+      font-size: 1rem;
+   }
 
-	/* FOOTER END */
+   /* FOOTER END */
+
+    /* RESERVATION */
+
+    .calendar {
+      margin-top: 20px;
+      margin-bottom: 75px;
+   }
+
+   .date-container {
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 100px;
+   }
+
+   .date-container ul{
+      margin-bottom: 0;
+   }
+
+   .date__session, .date__hour{
+      padding: 10 40px;
+   }
+
+   .date-container h3 {
+      text-align: center;
+      font-size: 1.2rem
+   }
+
+   .session__item{
+      height: 40px;
+   }
+
+   .date__hour ul li{
+      height: 40px;
+      width: 40px;
+      margin: 0;
+      margin-right: 5px;
+   }
+
+   .date__hour ul{
+      padding: 0 20px;
+   }
+
+   .userdata{
+      flex-direction: column;
+      margin-bottom: 50px;
+   }
+
+   .date-container h3:after{
+      display: none;
+   }
+   
+   .userdata input, .userdata input[name="phoneNumber"]{
+      padding: 0;
+      width: 100%;
+      margin-right: 0;
+   }
+
+   .userdata button{
+      top: 90%;
+   }
+
+   /* RESERVATION END */
 }
 
 @media (min-width: 766px) and (max-width: 991px) {
@@ -765,7 +886,6 @@
       margin: 0 15px;
    }
    /* AUDIENCE END */
-  
 
    /* DEFINITOION */
 
@@ -917,8 +1037,8 @@
    .price__item-info:after {
       top: -35px;
       left: 50%;
-	}
-	
+   }
+
    /* PRICE END */
 
    /* GALLERY */
@@ -932,81 +1052,143 @@
       margin-bottom: 50px;
    }
 
-	/* GALLERY END */
-	
-	/* MAP */
+   /* GALLERY END */
 
-	.map{
-		padding: 50px 0;
-	}
+   /* MAP */
 
-	.map h2{
-		font-size: 1.6rem;
-		margin-bottom: 50px;
-	}
-	/* MAP END */
+   .map {
+      padding: 50px 0;
+   }
 
-	/* CONTACT  */
+   .map h2 {
+      font-size: 1.6rem;
+      margin-bottom: 50px;
+   }
+   /* MAP END */
 
-	.contact{
-		padding: 75px 50px;
-	}
+   /* CONTACT  */
 
-	.contact h2{
-		font-size: 1.4rem;
-		margin-bottom: 50px;
-	}
+   .contact {
+      padding: 75px 50px;
+   }
 
-	.contact-container{
-		grid-gap:0;
-	}
+   .contact h2 {
+      font-size: 1.4rem;
+      margin-bottom: 50px;
+   }
 
-	.form-info{
-		margin-left: 25px;
-	}
+   .contact-container {
+      grid-gap: 0;
+   }
 
-	.form-info__item{
-		margin-bottom: 25px;
-	}
+   .form-info {
+      margin-left: 25px;
+   }
 
-	.form-info__item p{
-		font-size: 1rem;
-	}
+   .form-info__item {
+      margin-bottom: 25px;
+   }
 
-	/* CONTACT END */
+   .form-info__item p {
+      font-size: 1rem;
+   }
 
-	/* QUESTIONS */
+   /* CONTACT END */
 
-	.questions{
-		padding: 75px 50px;
-	}
+   /* QUESTIONS */
 
-	.questions h2{
-		font-size: 1.4rem;
-		margin-bottom: 50px;
-	}
+   .questions {
+      padding: 75px 50px;
+   }
 
-	.questions-container{
-		grid-template-columns: 1fr;
-		grid-template-rows: 1fr;
-		grid-gap: 0;
-		font-size: 1rem;
-	}
+   .questions h2 {
+      font-size: 1.4rem;
+      margin-bottom: 50px;
+   }
 
-	.question-container-1{
-		margin-right: 0;
-	}
+   .questions-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-gap: 0;
+      font-size: 1rem;
+   }
 
-	.question-container-2{
-		margin-left: 0;
-		margin-top: 0;
-	}
+   .question-container-1 {
+      margin-right: 0;
+   }
 
-	.img-container img{
-		display: none;
-	}
+   .question-container-2 {
+      margin-left: 0;
+      margin-top: 0;
+   }
 
-	/* QUESTIONS END */
+   .img-container img {
+      display: none;
+   }
+
+   /* QUESTIONS END */
+
+    /* RESERVATION */
+
+    .calendar {
+      margin-top: 20px;
+      margin-bottom: 75px;
+   }
+
+   .date-container {
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 100px;
+   }
+
+   .date-container ul{
+      margin-bottom: 0;
+   }
+
+   .date__session, .date__hour{
+      padding: 10 40px;
+   }
+
+   .date-container h3 {
+      text-align: center;
+      font-size: 1.2rem
+   }
+
+   .session__item{
+      height: 40px;
+   }
+
+   .date__hour ul li{
+      height: 40px;
+      width: 40px;
+      margin: 0;
+      margin-right: 5px;
+   }
+
+   .date__hour ul{
+      padding: 0 20px;
+   }
+
+   .userdata{
+      flex-direction: column;
+      margin-bottom: 50px;
+   }
+
+   .date-container h3:after{
+      display: none;
+   }
+   
+   .userdata input, .userdata input[name="phoneNumber"]{
+      padding: 0;
+      width: 100%;
+      margin-right: 0;
+   }
+
+   .userdata button{
+      top: 90%;
+   }
+
+   /* RESERVATION END */
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
