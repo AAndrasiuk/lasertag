@@ -6,10 +6,10 @@ const showHours = reservedHours => {
    let list = '<h3>Wybierz godzinę:</h3><ul class="animated fadeInUp">';
 	
    for (let i = 8; i <= 15; i++) {
-      let classes = reservedHours.includes(i) ? 'disabled' : '',
+      let classes = reservedHours.includes(i) ? ' disabled' : '',
          title = reservedHours.includes(i) ? 'Ta godzina jest zajęta' : '';
 		
-      list += `<li class="${classes}" title="${title}">${i}<span></span></li>`;
+      list += `<li class="hour_item${classes}" title="${title}">${i}<span></span></li>`;
    }
 
    list += '</ul>';
@@ -30,8 +30,8 @@ const showSessions = () => {
 }
 
 const addSelection = trueHours => {
-   const list = document.querySelectorAll('li[class=""]');
-   const sessions = document.querySelectorAll('li[class*="session__item"]');
+   const list = document.querySelectorAll('li[class="hour_item"]');
+   const sessions = document.querySelectorAll('li[class="session__item"]');
 
    for (li of list) {
       li.addEventListener("click", function() {
@@ -62,7 +62,7 @@ const addSelection = trueHours => {
 
 const deleteSelection = type => {
    let selected =
-      type.getAttribute("class") !== ""
+      type.getAttribute("class") === "session__item"
          ? document.querySelectorAll('.date__session li[selected="1"]')
          : document.querySelectorAll('.date__hour li[selected="1"]');
 
@@ -88,15 +88,14 @@ const dataAwaitAnimation = direction => {
 };
 
 const disableHoursForSessionLength = () => {
-   let hours = [...document.querySelectorAll(".date__hour li")];
+   let hours = [...document.querySelectorAll(".hour_item")];
 
    for (let i = 0; i < hours.length - 1; i++) {
-      hours[i + 1].getAttribute("class") === "disabled" && hours[i].classList.add("disabled");
+      hours[i + 1].getAttribute("class").includes("disabled") && hours[i].classList.add("disabled");
    }
 };
 
 document.querySelector(".calendar input").setAttribute("min", getDate);
-
 
 document.querySelector(".calendar").addEventListener("change", () => {
    hour.removeAttribute("value");
