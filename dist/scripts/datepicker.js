@@ -70,7 +70,7 @@ const deleteSelection = type => {
 };
 
 const resetHours = trueHours => {
-   let hours = [...document.querySelectorAll(".date__hour li")];
+   let hours = [...document.querySelectorAll(".hour_item")];
 
    for (let i = 8; i <= 15; i++) {
       !trueHours.includes(i) && hours[i - 8].classList.remove("disabled");
@@ -90,7 +90,8 @@ const dataAwaitAnimation = direction => {
 const disableHoursForSessionLength = () => {
    let hours = [...document.querySelectorAll(".hour_item")];
 
-   for (let i = 0; i < hours.length - 1; i++) {
+   hours[hours.length - 1].classList.add('disabled');
+   for (let i = 0; i < hours.length - 2; i++) {
       hours[i + 1].getAttribute("class").includes("disabled") && hours[i].classList.add("disabled");
    }
 };
