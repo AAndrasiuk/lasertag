@@ -2,23 +2,18 @@ const getDate = new Date().toJSON().slice(0, 10).replace(/-/g, '-');
 const awaiter = document.querySelector('.awaiter');
 
 const showHours = reservedHours => {
-	let ul = document.querySelector('.date__hour');
-	let list = '<h3>Wybierz godzinę:</h3><ul class="animated fadeInUp">';
+   let ul = document.querySelector('.date__hour');
+   let list = '<h3>Wybierz godzinę:</h3><ul class="animated fadeInUp">';
 	
-	for (let i = 8; i <= 15; i++){
-		let classes = '',
-				title = '';
+   for (let i = 8; i <= 15; i++) {
+      let classes = reservedHours.includes(i) ? 'disabled' : '',
+         title = reservedHours.includes(i) ? 'Ta godzina jest zajęta' : '';
 		
-		if (reservedHours.includes(i)){
-				classes += 'disabled';
-				title    = 'Ta godzina jest zajęta';
-		}
-		
-		list += `<li class="${classes}" title="${title}">${i}<span></span></li>`;
-	}
+      list += `<li class="${classes}" title="${title}">${i}<span></span></li>`;
+   }
 
-	list += '</ul>';
-	ul.innerHTML = list;						
+   list += '</ul>';
+   ul.innerHTML = list;
 }
 
 const showSessions = () => { 
