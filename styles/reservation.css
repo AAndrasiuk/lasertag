@@ -293,16 +293,16 @@
   height: 30px;
 }
 
-.date__hour li[class=""] {
+.date__hour li[class="hour_item"] {
   position: relative;
 }
 
-.date__hour li[class=""]:hover {
+.date__hour li[class="hour_item"]:hover {
   cursor: pointer;
 }
 
-.date__hour li[class=""]:after,
-.date__hour li[class=""]:before,
+.date__hour li[class="hour_item"]:after,
+.date__hour li[class="hour_item"]:before,
 .date__hour span:before,
 .date__hour span:after {
   content: "";
@@ -314,8 +314,8 @@
   transition: all 0.4s;
 }
 
-.date__hour li[class=""]:after,
-.date__hour li[class=""]:before {
+.date__hour li[class="hour_item"]:after,
+.date__hour li[class="hour_item"]:before {
   top: 0;
   right: 0;
 }
@@ -326,14 +326,14 @@
   left: 0;
 }
 
-.date__hour li[class=""]:hover span:after,
-.date__hour li[class=""]:hover:after {
+.date__hour li[class="hour_item"]:hover span:after,
+.date__hour li[class="hour_item"]:hover:after {
   width: 10px;
   height: 2px;
 }
 
-.date__hour li[class=""]:hover span:before,
-.date__hour li[class=""]:hover:before {
+.date__hour li[class="hour_item"]:hover span:before,
+.date__hour li[class="hour_item"]:hover:before {
   width: 2px;
   height: 30px;
 }

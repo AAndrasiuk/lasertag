@@ -2,23 +2,18 @@ const getDate = new Date().toJSON().slice(0, 10).replace(/-/g, '-');
 const awaiter = document.querySelector('.awaiter');
 
 const showHours = reservedHours => {
-	let ul = document.querySelector('.date__hour');
-	let list = '<h3>Wybierz godzinę:</h3><ul class="animated fadeInUp">';
+   let ul = document.querySelector('.date__hour');
+   let list = '<h3>Wybierz godzinę:</h3><ul class="animated fadeInUp">';
 	
-	for (let i = 8; i <= 15; i++){
-		let classes = '',
-				title = '';
+   for (let i = 8; i <= 15; i++) {
+      let classes = reservedHours.includes(i) ? ' disabled' : '',
+         title = reservedHours.includes(i) ? 'Ta godzina jest zajęta' : '';
 		
-		if (reservedHours.includes(i)){
-				classes += 'disabled';
-				title    = 'Ta godzina jest zajęta';
-		}
-		
-		list += `<li class="${classes}" title="${title}">${i}<span></span></li>`;
-	}
+      list += `<li class="hour_item${classes}" title="${title}">${i}<span></span></li>`;
+   }
 
-	list += '</ul>';
-	ul.innerHTML = list;						
+   list += '</ul>';
+   ul.innerHTML = list;
 }
 
 const showSessions = () => { 
@@ -35,8 +30,8 @@ const showSessions = () => {
 }
 
 const addSelection = trueHours => {
-   const list = document.querySelectorAll('li[class=""]');
-   const sessions = document.querySelectorAll('li[class*="session__item"]');
+   const list = document.querySelectorAll('li[class="hour_item"]');
+   const sessions = document.querySelectorAll('li[class="session__item"]');
 
    for (li of list) {
       li.addEventListener("click", function() {
@@ -53,10 +48,11 @@ const addSelection = trueHours => {
          resetHours(trueHours);
          this.setAttribute("selected", "1");
 
-         duration.value = parseInt(this.innerHTML.split(" / ")[1][0]);
+         const sessionLength = parseInt(this.innerHTML.split(" / ")[1][0]);
 
-         currentSession = parseInt(this.innerHTML.split(" / ")[1][0]);
-         currentSession === 2 && disableHoursForSessionLength();
+         duration.value = sessionLength;
+
+         sessionLength === 2 && disableHoursForSessionLength();
 
          selected = document.querySelectorAll('.date__hour li[selected="1"]');
 
@@ -67,7 +63,7 @@ const addSelection = trueHours => {
 
 const deleteSelection = type => {
    let selected =
-      type.getAttribute("class") !== ""
+      type.getAttribute("class") === "session__item"
          ? document.querySelectorAll('.date__session li[selected="1"]')
          : document.querySelectorAll('.date__hour li[selected="1"]');
 
@@ -75,7 +71,7 @@ const deleteSelection = type => {
 };
 
 const resetHours = trueHours => {
-   let hours = [...document.querySelectorAll(".date__hour li")];
+   let hours = [...document.querySelectorAll(".hour_item")];
 
    for (let i = 8; i <= 15; i++) {
       !trueHours.includes(i) && hours[i - 8].classList.remove("disabled");
@@ -93,15 +89,15 @@ const dataAwaitAnimation = direction => {
 };
 
 const disableHoursForSessionLength = () => {
-   let hours = [...document.querySelectorAll(".date__hour li")];
+   let hours = [...document.querySelectorAll(".hour_item")];
 
-   for (let i = 0; i < hours.length - 1; i++) {
-      hours[i + 1].getAttribute("class") === "disabled" && hours[i].classList.add("disabled");
+   hours[hours.length - 1].classList.add('disabled');
+   for (let i = 0; i < hours.length - 2; i++) {
+      hours[i + 1].getAttribute("class").includes("disabled") && hours[i].classList.add("disabled");
    }
 };
 
 document.querySelector(".calendar input").setAttribute("min", getDate);
-
 
 document.querySelector(".calendar").addEventListener("change", () => {
    hour.removeAttribute("value");
