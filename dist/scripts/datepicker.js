@@ -48,10 +48,11 @@ const addSelection = trueHours => {
          resetHours(trueHours);
          this.setAttribute("selected", "1");
 
-         duration.value = parseInt(this.innerHTML.split(" / ")[1][0]);
+         const sessionLength = parseInt(this.innerHTML.split(" / ")[1][0]);
 
-         currentSession = parseInt(this.innerHTML.split(" / ")[1][0]);
-         currentSession === 2 && disableHoursForSessionLength();
+         duration.value = sessionLength;
+
+         sessionLength === 2 && disableHoursForSessionLength();
 
          selected = document.querySelectorAll('.date__hour li[selected="1"]');
 
